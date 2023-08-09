@@ -1,0 +1,27 @@
+{
+  "name": "goit-node-hw-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatarzynaCependa/goit-node-hw-01.git"
+  },
+  "author": "Katarzyna Cependa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KatarzynaCependa/goit-node-hw-01/issues"
+  },
+  "homepage": "https://github.com/KatarzynaCependa/goit-node-hw-01#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "commander": "^11.0.0"
+  }
+}
