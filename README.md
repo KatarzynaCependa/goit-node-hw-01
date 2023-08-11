@@ -1,4 +1,4 @@
 --action list: https://ibb.co/7j190Qc,
 --action get: https://ibb.co/JkzF2dm,
---action add:
---action remove: https://ibb.co/B25dG6p
+--action add: https://ibb.co/cb0xPnV,
+--action remove: https://ibb.co/9tSy5DP,
