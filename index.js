@@ -3,8 +3,8 @@ const program = new Command();
 
 const {
   listContacts,
-  //   getContactById,
-  //   removeContact,
+  getContactById,
+  removeContact,
   //   addContact,
 } = require("./contacts");
 
@@ -26,16 +26,18 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       console.table(contactList);
       break;
 
-    // case "get":
-    //   // ... id
-    //   break;
+    case "get":
+      const contactById = await getContactById(id);
+      console.log(contactById);
+      break;
+
+    case "remove":
+      const updatedList = await removeContact(id);
+      console.log(`User with ID: ${id} has been removed from the list.`);
+      break;
 
     // case "add":
     //   // ... name email phone
-    //   break;
-
-    // case "remove":
-    //   // ... id
     //   break;
 
     default:

@@ -7,27 +7,44 @@ const listContacts = async () => {
   try {
     const data = await fs.readFile(contactsPath);
     const contacts = JSON.parse(data);
+
     return contacts;
   } catch (err) {
     console.log(err.message);
   }
 };
 
-module.exports = {
-  listContacts,
-  //   getContactById,
-  //   removeContact,
-  //   addContact,
+const getContactById = async (contactId) => {
+  try {
+    const data = await fs.readFile(contactsPath);
+    const contacts = JSON.parse(data);
+    const foundId = contacts.find((contact) => contact.id === contactId);
+
+    return foundId;
+  } catch (err) {
+    console.log(err.message);
+  }
 };
 
-// function getContactById(contactId) {
-//   // ...twój kod
-// }
+const removeContact = async (contactId) => {
+  try {
+    const data = await fs.readFile(contactsPath);
+    const contacts = JSON.parse(data);
+    const filteredList = contacts.filter((contact) => contact.id !== contactId);
 
-// function removeContact(contactId) {
-//   // ...twój kod
-// }
+    fs.writeFile(contactsPath, JSON.stringify(filteredList));
+  } catch (err) {
+    console.log(err.message);
+  }
+};
 
 // function addContact(name, email, phone) {
 //   // ...twój kod
 // }
+
+module.exports = {
+  listContacts,
+  getContactById,
+  removeContact,
+  //   addContact,
+};
